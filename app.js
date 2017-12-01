@@ -26,7 +26,7 @@ console.log('Your username', ':', currentUserName);
 
 //Set up mongoose connection
 var mongoose = require('mongoose');
-var mongoDB = 'mongodb://JuanDa95:yolo95@ds155091.mlab.com:55091/cv-it-checkout';
+const mongoDB = MONGODB_LAB_URI;
 mongoose.connect(mongoDB);
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));

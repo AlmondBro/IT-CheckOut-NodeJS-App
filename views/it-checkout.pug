@@ -1,0 +1,49 @@
+doctype html
+html(lang='en')
+  head
+    meta(name='author', content='Juan David Lopez Londono')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+    meta(http-equiv='content-language', content='en-us')
+    meta(http-equiv='content-type', content='text/html; charset=UTF-8')
+    meta(name='description', content='Centinella Valley School District IT CheckOut System')
+    link(href='https://fonts.googleapis.com/css?family=Cedarville+Cursive', rel='stylesheet')
+    link(href='/stylesheets/grid-system.css', rel='stylesheet')
+    // Grid System
+    link(href='/stylesheets/style.css', rel='stylesheet')
+    // All styling outside the grid system is done here
+    link(rel='stylesheet', href='https://unpkg.com/flatpickr/dist/flatpickr.min.css')
+    //if IE 9
+      link(rel='stylesheet', type='text/css', href='https://npmcdn.com/flatpickr/dist/ie.css')
+    // Date picker
+    script(src='https://use.fontawesome.com/ba5e00fb64.js')
+    // Font Awesome Icons
+    title IT CheckOut System | Centinela Valley
+  body
+    header#it-checkout-header.container-fluid
+      center
+        #checkout-header.It-CheckOut
+          #checkout-header-text.row
+            .col-md-6
+              img#checkout-header-logo.CV-logo(src='/images/CV-600x600.png')
+            // /.col-md-6
+            .col-md-6
+              h2#checkout-header-title IT Inventory Control
+              h1#checkout-header-title
+                | Welcome 
+                span#it-username #{usernameOS} 
+              h2#checkout-header-title Total Items: #{itemCount}
+      include navigation.pug 
+    if data[0] != null || data[0] != undefined 
+      include editDevice-modal.pug
+      include deleteDevice-modal.pug
+      // container-fluid
+      .container
+        include table.pug
+        include paginate 
+      // /.container
+    else
+      .container
+        p.resultsMessage No item could be found of the serial number:  
+          strong #{ISBN}
+include footer

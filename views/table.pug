@@ -1,0 +1,38 @@
+table
+  thead
+    tr
+      th Category
+      th Manufacturer
+      th Model
+      th Condition
+      th Location
+      th Purchase
+      th Current Value
+      th Acquired Date
+      th Serial
+      th Edit
+      th Delete
+    tbody
+      each object in data
+        if object != null
+          tr
+            td= object.category 
+            td= object.manufacturer
+            td= object.model
+            td= object.condition
+            td= object.location
+            td= object.purchase_price
+            td= object.current_value
+            td= object.date_formatted
+            td= object.serial_number   
+            td
+              //a.target-pseudoclass-hack(id=object.id href='?deviceID='+object.id+'#edit-device-modal' data-id=object.id)
+              a.target-pseudoclass-hack(id=object.id href='/items/edit'+'/'+object.id+'#edit-device-modal' data-id=object.id)
+                 i.fa.fa-pencil-square-o.edit-icon(aria-hidden='true')
+            td
+              a.target-pseudoclass-hack(href='/items/delete'+'/'+object.id+'#delete-device-modal')
+                i.fa.fa-trash-o.edit-icon.trash-icon(aria-hidden='true')
+            //include editDevice-modal.pug
+        else
+            p.resultsMessage No item could be found of the serial number:  
+              strong #{ISBN}

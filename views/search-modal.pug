@@ -1,0 +1,47 @@
+// Search Modal
+#search-modal.pop-up-modal
+  form.login-form(method="GET" action='/items/search')
+    p
+      // Serial Section
+      label(for='ISBN_field')
+        strong Serial:
+      input#ISBN_field.nav-popup-input-field(type='search', name='ISBN_field')
+    p
+      // Technology
+      label(for='technology_dropdown')
+        strong Technology:
+      .select-style
+        select#technology_dropdown(name="technology_dropdown")
+          option(value='dvd-drive') DVD Drive
+          option(value='nexus-7-tablet') Nexus 7 Tablet
+          option(value='docking-station') Docking Station
+          option(value='ziggie-camera') Ziggie Camera
+          option(value='promethean-stylus') Promethean Stylus
+          option(value='promethean-slate') Promethean Slate
+          option(value='iPad') iPad
+          option(value='ipad-keyboard') iPad Keyboard
+          option(value='stylus') Stylus
+          option(value='laptop') Laptop
+          option(value='speakers') Speakers
+          option(value='clickers') Clickers
+          option(value='document-camera') Document Camera
+          option(value='projector') Projector
+          option(value='elmo') Elmo
+          option(value='camera') Camera
+          option(value='plasco-mobile') Plasco Mobile
+          option(value='eno-slate') Eno-Slate
+          option(value='eno-stylus') Eno-Stylus
+    p
+      // Location
+      label(for='location_dropdown')
+        strong Location:
+      #technology-select-div.select-style
+        select#location_dropdown(name="location_dropdown")
+          option(value='District Office') District Office
+          option(value='Adult Ed') Adult Ed
+          option(value='CVIS') CVIS
+          option(value='Hawthorne') Hawthorne
+          option(value='Leuzinger') Leuzinger
+          option(value='Lloyde') Lloyde
+    center
+      button.login-button(type='submit') Search

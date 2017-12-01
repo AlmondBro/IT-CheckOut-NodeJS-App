@@ -1,0 +1,91 @@
+// Add Device modal
+#add-device-modal.general-modal
+  .modal-frame
+    a.close-icon(href='#close') ×
+    .modal-guts
+      center
+        h5.modal-header
+          | Add a New Device 
+          i.fa.fa-plus-circle(aria-hidden='true')
+          i.fa.fa-laptop(aria-hidden='true')
+      form#addDevice_form.login-form(method='POST' action='#close')
+        p
+          // Category Section
+          label(for='category_dropdown')
+            strong Category:
+          .select-style
+            select#category_dropdown(name='category_dropdown')
+              option(value='DVD Drive') DVD Drive
+              option(value='Nexus 7 Tablet') Nexus 7 Tablet
+              option(value='Docking Station') Docking Station
+              option(value='Ziggie Camera') Ziggie Camera
+              option(value='Promethean Stylus') Promethean Stylus
+              option(value='Promethean Slate') Promethean Slate
+              option(value='iPad') iPad
+              option(value='iPad KeyBoard') iPad Keyboard
+              option(value='Stylus') Stylus
+              option(value='Laptop') Laptop
+              option(value='Speakers') Speakers
+              option(value='Clickers') Clickers
+              option(value='Document Camera') Document Camera
+              option(value='Projector') Projector
+              option(value='Elmo') Elmo
+              option(value='Camera') Camera
+              option(value='Plasco Mobile') Plasco Mobile
+              option(value='Eno Slate') Eno-Slate
+              option(value='Eno Stylus') Eno-Stylus
+        p
+          // Manufacturer Section
+          label(for='manufacturer_field')
+            strong Manufacturer:
+          input#manufacturer_field.nav-popup-input-field(type='text', name='manufacturer_field')
+        p
+          // Model Section
+          label(for='model_field')
+            strong Model:
+          input#model_field.nav-popup-input-field(type='text', name='model_field')
+        p
+          // Condition Section
+          label(for='condition_field')
+            strong Condition:
+          input#condition_field.nav-popup-input-field(type='text', name='condition_field')
+        p
+          // Location
+          label(for='locationDropdown')
+            strong Location:
+          #technology-select-div.select-style
+            select#locationDropdown(name="locationDropdown")
+              option(value='District Office') District Office
+              option(value='Adult Ed') Adult Ed
+              option(value='CVIS') CVIS
+              option(value='Hawthorne') Hawthorne
+              option(value='Leuzinger') Leuzinger
+              option(value='Lloyde') Lloyde
+        p
+          // Purchase Price Section
+          label(for='purchasePrice_field')
+            strong Purchase Price:
+          input#purchasePrice_field.nav-popup-input-field(type='number', name='purchasePrice_field')
+        p
+          // Current Value Section
+          label(for='currentValue_field')
+            strong Current Value:
+          input#currentValue_field.nav-popup-input-field(type='number', name='currentValue_field')
+        p
+          //Date Field
+          label(for='date_field')
+            strong Acquired Date:
+          input#date_field.nav-popup-input-field.datePicker(type='date', placeholder='Select a date...', name='date_field')
+          //input#date_field(type='date', placeholder='Select a date...', name='date_field')
+        p
+          // Serial Number Section
+          label(for='serialNumber_field')
+            strong Serial Number:
+          input#serialNumber_field.nav-popup-input-field(type='text', name='serialNumber_field')
+        center
+          button#addDevice_SubmitButton.login-button(type='submit', name='addDevice_SubmitButton') Add Device
+          if errors 
+            ul
+              for error in errors
+                li!= error.msg     
+// / Add a Device Modal

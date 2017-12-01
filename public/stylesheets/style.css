@@ -1,0 +1,935 @@
+body {
+    background-color: #8b0400;
+    font-size: 16px;
+}
+
+.CV-logo {
+    width: 250px;
+    margin-bottom: 10px;
+}
+
+.It-CheckOut {
+    background-color: white;
+    max-width: 500px;
+    color: #8b0400;
+    font-size: 1.5em;
+    border-radius: 5px;
+    margin: 0;
+    padding: 0;
+}
+
+.form-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.login-form {
+    padding: 10px 5px;
+    margin: 0 auto;
+    font-size: 1.15em;
+    border: 0;
+    padding: 10px;
+    color: #6c0300;
+}
+
+label~.login-page-input {
+    padding: 10px 0;
+    font-size: 1.15em;
+    color: #6c0300;
+}
+
+.login-button {
+    margin: 0 auto;
+    color: white;
+    font-size: 1.2em;
+    background-color: #6c0300;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 0;
+}
+
+.delete-device-button {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.delete-modal-buttons {}
+
+.asterisk-required {
+    color: red;
+    font-weight: bold;
+}
+
+
+/*
+.home-login-input {
+    padding: 10px;
+    border: solid 1px #6b0f0f4d;
+    transition: box-shadow 0.3s, border 0.3s;
+}
+
+.home-login-input:focus,
+.home-login-input:focus {
+    border: solid 1px #8b0400;
+    box-shadow: 0 0 2px 1px #650401;
+}
+*/
+
+#checkout-header {
+    max-width: 100%;
+    border-radius: 0 0 5px 5px;
+    position: relative;
+}
+
+
+/* Table Styling */
+
+table {
+    margin: 10px 0;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.4em;
+}
+
+@media only screen and (min-width: 1150px) and (max-width: 1199px) {
+    table {
+        font-size: 1.23em;
+    }
+}
+
+@media only screen and (max-width: 1149px) {
+    table {
+        font-size: 1.13em;
+    }
+}
+
+@media only screen and (min-width: 312px) and (max-width: 350px) {
+    table {
+        font-size: 1em;
+    }
+}
+
+@media only screen and (max-width: 311px) {
+    table {
+        font-size: 0.95em;
+    }
+}
+
+.edit-icon {
+    padding-left: 9px;
+    transition: color 0.2s;
+}
+
+.edit-icon:hover {
+    cursor: pointer;
+    color: #ad312d;
+}
+
+.trash-icon {
+    margin-left: 14px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .trash-icon {
+        margin-left: 0px;
+    }
+}
+
+
+/* Remove arrows from the number input type */
+
+input[type="number"]::-moz-inner-spin-button,
+input[type="number"]::-moz-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+
+/*Zebra striping */
+
+tr:nth-of-type(odd) {
+    background: #fdfdfd;
+}
+
+tr:nth-of-type(even) {
+    background: #f4fcfd;
+}
+
+th {
+    background-color: #9f2420;
+    color: white;
+    font-weight: bold;
+}
+
+td,
+th {
+    padding: 6px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+
+/*
+.parent {
+  position: relative;
+}
+.child {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+*/
+
+
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+
+
+/* First specification was 760px*/
+
+@media only screen and (max-width: 768px),
+(min-device-width: 768px) and (max-device-width: 1024px) {
+    /* Force table to not be like tables anymore */
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+    /* Hide table headers (but not display: none;, for accessibility) */
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    tr {
+        border: 1px solid #ccc;
+    }
+    td {
+        /* Behave  like a "row" */
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+    }
+    td:before {
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+    }
+    /*	Label the data	*/
+    td:nth-of-type(1):before {
+        content: "Category";
+    }
+    td:nth-of-type(2):before {
+        content: "Manufacturer";
+    }
+    td:nth-of-type(3):before {
+        content: "Model";
+    }
+    td:nth-of-type(4):before {
+        content: "Condition";
+    }
+    td:nth-of-type(5):before {
+        content: "Location";
+    }
+    td:nth-of-type(6):before {
+        content: "Purchase";
+    }
+    td:nth-of-type(7):before {
+        content: "Current Value";
+    }
+    td:nth-of-type(8):before {
+        content: "Acquired Date";
+    }
+    td:nth-of-type(9):before {
+        content: "Device ID";
+    }
+}
+
+header {
+    position: relative;
+}
+
+nav {
+    position: absolute;
+    bottom: 2.5%;
+    left: 50%;
+}
+
+.nav-icon {
+    display: inline-block;
+    text-decoration: none;
+    color: #6c0300;
+    font-size: 1.5em;
+    margin: 0 15px;
+    /*Was 15px*/
+    padding: 3px;
+    border-bottom: 5px solid #6c0300;
+    border-radius: 10%;
+    transition: color 0.2s;
+    cursor: pointer;
+}
+
+.nav-icon i {
+    cursor: pointer;
+}
+
+.nav-icon:hover {
+    color: #ad312d;
+    border-bottom: 5px solid #ad312d;
+}
+
+
+/* CSS Checkbox Hacks for Icons */
+
+
+/* Search Nav Icon CSS Checkbox Hack */
+
+.checkbox-hack {
+    /* Alternative way
+    position: absolute;
+    top: -9999px;
+    left: -9999px; */
+    display: none;
+}
+
+.pop-up-modal {
+    position: absolute;
+    background-color: white;
+    max-width: 300px;
+    border: 3px solid #ad312d;
+    left: 77px;
+    top: 63px;
+    border-radius: 10px;
+    box-shadow: 7px 7px 9px #ad312d;
+    z-index: 1;
+}
+
+
+/* Add User Modal */
+
+
+/*
+#p-tag-job-title {
+	display: inline-block;
+	position: absolute;
+	bottom: 10px;
+	left: 180px;
+}
+*/
+
+
+/* General Modal Styling */
+
+.general-modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 4;
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Black w/ opacity */
+    visibility: hidden;
+    top: -900px;
+    opacity: 0;
+    transition: opacity 0.6s;
+    transition: top 0.6s;
+    /*we don’t want the link to be 
+    clickable until the “:target” pseudo 
+    class is fired. */
+    pointer-events: none;
+    overflow: auto;
+}
+
+.general-modal:target {
+    pointer-events: auto;
+    visibility: visible;
+    opacity: 1;
+    top: 0;
+}
+
+.modal-frame {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    max-width: 500px;
+    margin-top: 5%;
+    /* margin: auto; */
+    /* width: 500px; */
+}
+
+.modal-guts {
+    position: absolute;
+    background-color: white;
+    /* max-width: 500px; */
+    border: 3px solid #ad312d;
+    border-radius: 10px;
+    box-shadow: 7px 7px 9px #ad312d;
+    z-index: 1;
+    /* -webkit-animation-name: animatetop; */
+    /* -webkit-animation-duration: 0.4s; */
+    /* animation-name: animatetop; */
+    /* animation-duration: 0.4s; */
+    /* transition: opacity 0.6s ease-in-out; */
+    /* top: 50%; */
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+.target-pseudoclass-hack {
+    text-decoration: none;
+    color: inherit;
+    /* was inherit */
+}
+
+.target-pseudoclass-hack:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.target-pseudoclass-hack:active,
+#icon-list-nav-button:visited,
+#icon-list-nav-button:active {
+    color: #8b0400;
+}
+
+.modal-header {
+    font-size: 2.5em;
+    color: #8b0400;
+    margin: 0 auto;
+    border-bottom: 3px solid#ad312d;
+    padding: 7px 15px;
+}
+
+.close-icon {
+    position: absolute;
+    left: 88%;
+    top: -15px;
+    font-size: 1.35em;
+    color: #8b0400;
+    background-color: white;
+    border-radius: 20px;
+    padding: 0 10px;
+    border: 3px solid #8b0400;
+    z-index: 10;
+}
+
+.close-icon:hover {
+    cursor: pointer;
+    color: #8b0400;
+    text-decoration: none;
+}
+
+
+/* Adjust close icon when the modal readjusts */
+
+@media screen and (max-width: 550px) {
+    .close-icon {
+        top: -20px;
+        left: 47%;
+    }
+    .modal-frame {
+        margin-top: 8%;
+    }
+    .modal-frame #close-icon-add-a-user-modal {
+        left: 45%;
+        top: -22px;
+    }
+    .modal-frame #close-icon-edit-device-modal,
+    .modal-frame #close-icon-delete-device-modal {
+        left: 50%;
+        top: -22px;
+    }
+}
+
+#close-icon-add-a-user-modal {
+    left: 72%;
+}
+
+#close-icon-edit-device-modal {
+    left: 69%;
+}
+
+#close-icon-delete-device-modal {
+    left: 75%;
+}
+
+
+/* Add Device Modal */
+
+
+/* Add User Modal */
+
+
+/* Search Icon Pop-up */
+
+#search-icon-li {
+    position: relative;
+}
+
+#search-modal {
+    display: none;
+    z-index: 1;
+}
+
+#search-toggle:checked~#search-modal {
+    display: block;
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+#search-toggle:not(:checked)~#search-modal {
+    display: none;
+    animation: fadeOut 0.2s ease-in-out;
+}
+
+#search-toggle:checked+.nav-icon {
+    color: #ad312d;
+    border-color: #ad312d;
+}
+
+#search-modal::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 90%;
+    /*
+    border-width: 5px 0 0 5px;
+    border-style: solid;
+    border-color: #6c0300; */
+    /* Width & Height Are replacement for content:''?*/
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 16px solid #ad312d;
+}
+
+@media screen and (max-width: 420px) {
+    #search-modal::after {
+        left: 40px;
+    }
+    #search-modal {
+        left: 40px;
+        top: 300px;
+        /* Was 263px before width change of nav < 420px */
+    }
+}
+
+@media screen and (max-width: 420px) {
+    #search-model {
+        top: 263px;
+        left: 75px;
+        max-width: 235px;
+    }
+    #search-model:after {
+        left: 2%;
+    }
+}
+
+.select-style {
+    width: 71%;
+    width: 180px;
+    border: 1px solid #6b0f0f4d;
+    /* Border was #ccc which looked really
+    nice but didnt match with color scheme, so 
+    opted for red */
+    border-radius: 3px;
+    overflow: hidden;
+    background: #fafafa url("data:image/png;base64,R0lGODlhDwAUAIABAAAAAP///yH5BAEAAAEALAAAAAAPABQAAAIXjI+py+0Po5wH2HsXzmw//lHiSJZmUAAAOw==") no-repeat 90% 50%;
+}
+
+.select-style select {
+    padding: 5px 8px;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+}
+
+.select-style select:focus {
+    outline: none;
+}
+
+.select-style select option {
+    border-radius: 5px;
+}
+
+#technology-select-div {
+    width: 135px;
+}
+
+.nav-popup-input-field {
+    padding: 2px;
+    width: 100%;
+    border: solid 1px #6b0f0f4d;
+    background: #fafafa;
+    transition: box-shadow 0.3s, border 0.3s;
+}
+
+
+/*
+.nav-popup-input-field:focus {
+    border: solid 1px #8b0400;
+    box-shadow: 0 0 2px 1px #650401;
+}
+*/
+
+
+/* Select Styling */
+
+#welcome-slogan {
+    font-family: 'Cedarville Cursive', cursive;
+}
+
+#it-username {
+    font-weight: bolder;
+}
+
+ul.pagination {
+    font-size: 1.4em;
+}
+
+.pagination-li {
+    text-decoration: none;
+    display: inline;
+    background-color: white;
+    border-radius: 5px;
+    padding: 8px;
+    margin: 0 5px;
+}
+
+.pagination-li a {
+    color: #ad312d;
+}
+
+.nav-menu-icon {
+    display: none;
+}
+
+
+/* Menu Icon  Icons */
+
+
+/* Menu Icon Bars */
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #8b0400;
+    margin: 6px auto;
+    transition: 0.4s;
+    color: #8b0400;
+}
+
+
+/* Rotate first bar */
+
+
+/* Old Nav-Menu Hover 
+
+.nav-menu-icon:hover .bar1,
+.nav-menu-icon:focus .bar1,
+.nav-menu-icon:active .bar1 */
+
+
+/*
+.nav-menu-icon:focus .bar1,
+.nav-menu-icon:active .bar1, */
+
+#menu-toggle:checked~label .nav-menu-icon .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+
+/* Fade out the second bar */
+
+
+/* Old Nav-Menu Hover
+.nav-menu-icon:hover .bar2,
+.nav-menu-icon:focus .bar2,
+.nav-menu-icon:active .bar2 */
+
+
+/*
+.nav-menu-icon:focus .bar2,
+.nav-menu-icon:active .bar2, */
+
+#menu-toggle:checked~label .nav-menu-icon .bar2 {
+    opacity: 0;
+}
+
+
+/* Rotate last bar */
+
+
+/* Old Nav-Menu Hover 
+.nav-menu-icon:hover .bar3,
+.nav-menu-icon:focus .bar3,
+.nav-menu-icon:active .bar3 */
+
+
+/*
+.nav-menu-icon:focus .bar3,
+.nav-menu-icon:active .bar3,*/
+
+#menu-toggle:checked~label .nav-menu-icon .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+
+/* Media Queries */
+
+@media screen and (max-width: 991px) {
+    nav {
+        position: relative;
+        bottom: 0%;
+        left: 0%;
+        background-color: white;
+        max-width: 470px;
+        margin: auto;
+        border-radius: 0 2px;
+        padding-bottom: 3px;
+        border-top: 2px solid #6c0300;
+        border-bottom: 4px solid #6c0300;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    nav {
+        width: 190px;
+        border-radius: 5px;
+        max-width: 100%;
+        /* 200px works too */
+    }
+    #nav-ul {
+        padding: 0;
+    }
+    .CV-logo {
+        width: 100%;
+        padding: 5%;
+    }
+    /* Nav List Items */
+    .nav-icon {
+        display: none;
+    }
+    .nav-menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+    .nav-icon i {
+        margin: 0 15px;
+        padding: 3px;
+        border-bottom: 5px solid #6c0300;
+        border-radius: 10%;
+    }
+    .nav-icon:hover {
+        color: #ad312d;
+        border-bottom: 0;
+    }
+    .nav-icon i:hover {
+        color: #ad312d;
+        border-bottom: 5px solid #ad312d;
+    }
+    /* Old Hover:
+    .nav-menu-icon:hover~.nav-icon,
+    .nav-menu-icon:focus~.nav-icon,
+    .nav-menu-icon:active~.nav-icon 
+    */
+    #menu-toggle:checked~.nav-icon {
+        margin: 0 60px;
+        display: block;
+        border: 0;
+        border-radius: 0;
+        animation: fadeIn 0.8s ease-in-out;
+    }
+}
+
+.resultsMessage {
+    font-size: 1.28em;
+    background-color: white;
+    color: #9f2420;
+    padding: 5px;
+    margin: 0 auto;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+.inlineText {
+    display: inline;
+}
+
+
+/* Flatpicker Date Selector Custom Styling */
+
+.flatpickr-calendar .flatpickr-month {
+    background: #9f2420 !important;
+    color: white;
+    fill: white;
+    border-bottom: 3px solid #6c0300;
+}
+
+.flatpickr-calendar span.flatpickr-weekday {
+    background: transparent;
+    color: rgb(33, 0, 0);
+}
+
+.flatpickr-calendar .dayContainer {
+    /*background-color: #f4fcfd;*/
+    /*background-color: #ebf3f5;*/
+    background-color: #ebf3f566;
+}
+
+.flatpickr-calendar .flatpickr-day.selected,
+.flatpickr-calendar .flatpickr-day.selected:hover {
+    background: #9f2420;
+    box-shadow: none;
+    color: #fff;
+    border-color: #6c0300;
+}
+
+.flatpickr-calendar .flatpickr-weekdays {
+    /* background-color: #e5eef2;*/
+    background-color: #eaf1f5cc;
+}
+
+.flatpickr-calendar .flatpickr-day:hover {
+    background: #9f242033;
+    border-color: #6c030066;
+}
+
+.flatpickr-calendar .flatpickr-current-month span.cur-month {
+    color: white;
+    font-weight: thick;
+}
+
+.flatpickr-calendar .flatpickr-day.today:hover,
+.flatpickr-day.today:focus {
+    border-color: #6c030066;
+    background: #9f242033;
+    color: black;
+}
+
+.flatpickr-calendar .flatpickr-day.today {
+    border-color: #6c0300;
+    background-color: white;
+}
+
+.flatpickr-calendar .flatpickr-day.selected {
+    color: white;
+}
+
+.flatpickr-calendar .flatpickr-day.selected:hover,
+.flatpickr-calendar .flatpickr-day.today.selected,
+.flatpickr-calendar .flatpickr-day.prevMonthDay.today {
+    color: black;
+}
+
+.flatpickr-calendar .flatpickr-day.prevMonthDay.selected {
+    background: #9f242033;
+    border-color: #6c030066;
+    color: gray;
+}
+
+.flatpickr-calendar.arrowBottom::before {
+    border-top-color: #f7fafb;
+}
+
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+
+.fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+}

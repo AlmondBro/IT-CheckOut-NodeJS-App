@@ -1,0 +1,45 @@
+// Add user modal
+#add-user-modal.general-modal
+  .modal-frame
+    a#close-icon-add-a-user-modal.close-icon(href='#close') ×
+    .modal-guts
+      center
+        h5.modal-header
+          | Add a New User 
+          i.fa.fa-user-plus(aria-hidden='true')
+      form.login-form
+        p
+          // First Name Section
+          label(for='first-name-field')
+            strong First Name:
+          input#first-name-field.nav-popup-input-field(type='text')
+        p
+          // Last Name Section
+          label(for='last-name-field')
+            strong Last Name:
+          input#last-name-field.nav-popup-input-field(type='text')
+        p
+          // Email Section
+          label(for='email-field')
+            strong E-mail:
+          input#email-field.nav-popup-input-field(type='text')
+        p
+          // Location
+          label(for='location-dropdown')
+            strong Location:
+          #technology-select-div.select-style
+            select#location-dropdown
+              option(value='district-office') District Office
+              option(value='adult-ed') Adult Ed
+              option(value='cvis') CVIS
+              option(value='hawthorne') Hawthorne
+              option(value='leuzinger') Leuzinger
+              option(value='lloyde') Lloyde
+        p#p-tag-job-title
+          // Job Title
+          label(for='job-title-field')
+            strong Job Title:
+          input#job-title-field.nav-popup-input-field(type='text')
+        center
+          button.login-button(type='submit') Add User
+// / Add a User Modal

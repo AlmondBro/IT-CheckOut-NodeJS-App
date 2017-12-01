@@ -1,0 +1,63 @@
+// Delete Device modal
+#delete-device-modal.general-modal
+    .modal-frame
+        a#close-icon-delete-device-modal.close-icon(href='#close') ×
+        .modal-guts
+          center
+            h5.modal-header
+              | Delete Device  
+              i.fa.fa-trash(aria-hidden='true')
+              i.fa.fa-laptop(aria-hidden='true')
+          form.login-form(method='POST' action='#close' enctype='application/x-www-form-urlencoded')
+            p Are you sure you want to delete the item of ID:
+            center
+              em
+                p=data[0].serial_number
+            hr
+            strong
+              p.inlineText Category: 
+            em
+              p.inlineText=data[0].category
+            hr
+            strong
+              p.inlineText Manufacturer: 
+            em
+              p.inlineText=data[0].manufacturer
+            hr
+            strong
+              p.inlineText Model: 
+            em
+              p.inlineText=data[0].model
+            hr
+            strong
+              p.inlineText Condition: 
+            em
+              p.inlineText=data[0].condition
+            hr
+            strong
+              p.inlineText Purchase Price: 
+            em
+              p.inlineText=data[0].purchase_price
+            hr
+            strong
+              p.inlineText Current Value: 
+            em
+              p.inlineText=data[0].current_value
+            hr
+            strong
+              p.inlineText Acquired Date: 
+            em
+              p.inlineText=data[0].date_formatted
+            hr
+            strong
+              p.inlineText Serial: 
+            em
+              p.inlineText=data[0].serial_number
+            hr
+            center
+              .delete-modal-buttons
+                input(type='hidden', name='_method', value='DELETE')
+                button.login-button.delete-device-button(type='submit') Yes
+                a(href='/items/delete'+'/'+data[0].id+'#close')
+                  button.login-button.delete-device-button No
+//Delete Device Modal

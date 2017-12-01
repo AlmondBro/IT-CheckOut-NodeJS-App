@@ -1,0 +1,15 @@
+if paginate.hasPreviousPages || paginate.hasNextPages(pageCount)
+center
+    ul.pagination
+        if pages
+            if paginate.hasPreviousPages
+               li.pagination-li
+                    a(href=paginate.href(true)).prev
+                        i.fa.fa-step-backward(aria-hidden='true')
+            each page in pages
+                li.pagination-li
+                    a(href=page.url)=page.number
+        if paginate.hasNextPages(pageCount)
+           li.pagination-li
+              a(href=paginate.href()).next
+                    i.fa.fa-step-forward(aria-hidden='true')

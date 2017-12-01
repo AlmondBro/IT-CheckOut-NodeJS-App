@@ -1,0 +1,69 @@
+// Edit Device modal
+#edit-device-modal.general-modal
+    .modal-frame
+        a#close-icon-edit-device-modal.close-icon(href='#close') ×
+        .modal-guts
+          center
+            h5.modal-header
+              | Edit Device  
+              i.fa.fa-pencil-square-o(aria-hidden='true')
+              i.fa.fa-laptop(aria-hidden='true')
+          form.login-form(method='POST' action='#close' enctype='application/x-www-form-urlencoded')
+            p
+              // Category Section
+              label(for='category_dropdown')
+                strong Category:
+              .select-style
+                select#category_dropdown(name='category_dropdown')
+                  - categoryEnumValues = ['DVD Drive', 'Nexus 7 Tablet', 'Docking Station', 'Ziggie Camera','Promethean Stylus', 'Promethean Slate', 'iPad', 'iPad KeyBoard','Stylus', 'Laptop', 'Speakers', 'Clickers', 'Document Camera','Projector', 'Elmo', 'Camera', 'Plasco Mobile', 'Eno-Slate', 'Eno-Stylus'];
+                  each category in categoryEnumValues
+                    option(selected=data[0].category == category) #{category}
+            p
+              // Manufacturer Section
+              label(for='manufacturer_field')
+                strong Manufacturer:
+              input#manufacturer_field.nav-popup-input-field(type='text' name='manufacturer_field' value=data[0].manufacturer)
+            p
+              // Model Section
+              label(for='model_field')
+                strong Model:
+              input#model_field.nav-popup-input-field(type='text' name='model_field' value=data[0].model)
+            p
+              // Condition Section
+              label(for='condition_field')
+                strong Condition:
+              input#condition_field.nav-popup-input-field(type='text' name='condition_field' value=data[0].condition)
+            p
+              // Location
+              label(for='location_dropdown')
+                strong Location:
+              #technology-select-div.select-style
+                select#location_dropdown(name='location_dropdown')
+                  - locationEnumValues = ['District Office', 'Adult Ed', 'CVIS', 'Hawthorne', 'Leuzinger', 'Lloyde']; 
+                  each location in locationEnumValues
+                    option(selected=data[0].location == location) #{location}
+            p
+              // Purchase Price Section
+              label(for='purchase_price_field')
+                strong Purchase Price:
+              input#purchase_price_field.nav-popup-input-field(type='number' name='purchase_price_field' value=data[0].purchase_price)
+            p
+              // Current Value Section
+              label(for='currentValue_field')
+                strong Current Value:
+              input#currentValue_field.nav-popup-input-field(type='number' name='currentValue_field' value=data[0].current_value)
+            p
+              // Date Field
+              label(for='date_field')
+                strong Acquired Date:
+              input#date_field.nav-popup-input-field.datePicker(type='date', placeholder='Select a date...', name='date_field' value=value=data[0].acquired_date)
+            p
+              // Serial Number Section
+              label(for='serial_number_field')
+                strong Serial Number:
+              input#serial_number_field.nav-popup-input-field(type='text' name='serial_number_field' value=data[0].serial_number)
+            center
+              //Hidden input field for the method-override module
+              input(type='hidden', name='_method', value='PUT') 
+              button.login-button(type='submit') Update Device         
+//End Edit Device Modal

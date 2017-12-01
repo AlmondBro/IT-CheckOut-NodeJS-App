@@ -1,0 +1,5 @@
+{
+    "undefined": "mongodb://JuanDa95:yolo95@ds155091.mlab.com:55091/cv-it-checkout",
+    "dev": "mongodb://JuanDa95:yolo95@ds155091.mlab.com:55091/cv-it-checkout",
+    "prod": "localhost/PROD_DB_NAME"
+}

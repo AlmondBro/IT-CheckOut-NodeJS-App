@@ -1,0 +1,52 @@
+{
+  "name": "cv-it-with-db",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "devstart": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "async": "^2.4.1",
+    "body-parser": "~1.17.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.3",
+    "express": "^4.15.3",
+    "express-paginate": "^0.2.2",
+    "express-validator": "^3.2.0",
+    "fs": "0.0.1-security",
+    "method-override": "^2.3.9",
+    "moment": "^2.18.1",
+    "mongodb-datasets": "^0.1.5",
+    "mongoimport": "^1.0.6",
+    "mongoose": "^4.10.3",
+    "mongoose-paginate": "^5.0.3",
+    "morgan": "~1.8.1",
+    "os": "^0.1.1",
+    "pug": "~2.0.0-beta11",
+    "serve-favicon": "~2.4.2"
+  },
+  "engines": {
+    "node": "8.9.1"
+  },
+  "description": "This is a web app connected to a Microsoft SQL server where users with access can add new users, add new items to the inventory, etc.",
+  "main": "app.js",
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuanDavidLopez95/CentinellaValleyITCheckOut.git"
+  },
+  "keywords": [
+    "NodeJS",
+    "microsoft",
+    "SQL"
+  ],
+  "author": "Juan David Lopez Londono",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JuanDavidLopez95/CentinellaValleyITCheckOut/issues"
+  },
+  "homepage": "https://github.com/JuanDavidLopez95/CentinellaValleyITCheckOut#readme"
+}

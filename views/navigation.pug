@@ -1,0 +1,33 @@
+nav
+  ul#nav-ul
+    input#menu-toggle.checkbox-hack(type='checkbox')
+    label#nav-menu-icon-label(for='menu-toggle')
+      .nav-menu-icon
+        .bar1
+        .bar2
+        .bar3
+    li.nav-icon
+      a#icon-list-nav-button.target-pseudoclass-hack(href="/")
+        i.fa.fa-list-ol(aria-hidden='true')
+    li.nav-icon
+      a.target-pseudoclass-hack(href='#add-device-modal')
+        #add-device-icon
+          i.fa.fa-plus-circle(aria-hidden='true')
+          i.fa.fa-laptop(aria-hidden='true')
+    include addDevice-modal.pug
+    li.nav-icon
+      i.fa.fa-users(aria-hidden='true')
+    // Target Pseudoclass Hack
+    input#add-user-checkbox.checkbox-hack(type='checkbox')
+    li.nav-icon
+      a.target-pseudoclass-hack(href='#add-user-modal')
+        i.fa.fa-user-plus(aria-hidden='true')
+    include addUser-modal.pug
+    // CSS Checkbox Hack
+    input#search-toggle.checkbox-hack(type='checkbox')
+    li.nav-icon
+      label(for='search-toggle')
+        i#search-icon-li.fa.fa-search(aria-hidden='true')
+    li.nav-icon
+      i.fa.fa-sign-out(aria-hidden='true')
+    include search-modal.pug 

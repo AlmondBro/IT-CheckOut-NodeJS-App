@@ -26,7 +26,7 @@ console.log('Your username', ':', currentUserName);
 
 //Set up mongoose connection
 var mongoose = require('mongoose');
-const mongoDB = "mongodb://JuanDa95:yolo95@ds155091.mlab.com:55091/cv-it-checkout";
+const mongoDB = MONGODB_LAB_URI;
 //mongoose.connect(mongoDB);
 mongoose.createConnection(mongoDB);
 var db = mongoose.connection;

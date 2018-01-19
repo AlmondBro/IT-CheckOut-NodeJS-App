@@ -11,7 +11,7 @@ var fileSystem = require('fs');
 var os = require('os');
 const pug = require('pug');
 var paginate = require('express-paginate');
-var methodOverride = require('method-override')
+var methodOverride = require('method-override');
 
 var index = require('./routes/index.js');
 var users = require('./routes/userRouter.js');

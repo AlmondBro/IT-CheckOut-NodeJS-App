@@ -25,13 +25,11 @@ var currentUserName = userOS.username;
 console.log('Your username', ':', currentUserName);
 
 //Set up mongoose connection
+const MONGODB_LAB_URI = "mongodb://JDL95:swag123@ds155091.mlab.com:55091/cv-it-checkout";
 var mongoose = require('mongoose');
 const mongoDB = MONGODB_LAB_URI;
-//'mongodb://JD22:hello@ds155091.mlab.com:55091/cv-it-checkout';
-//MONGODB_LAB_URI;
- //"mongodb://JuanDa95:yolo95@ds155091.mlab.com:55091/cv-it-checkout";
-//mongoose.connect(mongoDB);
-mongoose.createConnection(mongoDB);
+mongoose.connect(mongoDB);
+//mongoose.createConnection(mongoDB);
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
